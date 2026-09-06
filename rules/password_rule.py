@@ -1,0 +1,27 @@
+import ast
+def password(source_code:str):
+    issue=[]
+    sensitive_words=["password","psswd","key","secret","key_api","secret_key","pwd"]
+    tree=ast.parse(source_code)
+    for node in ast.walk(tree):
+        if isinstance(node,ast.Assign):
+            var_name=node.targets[0].id.lower()
+            if any(word in var_name for word  in sensitive_words):
+                if isinstance(node.value,ast.Constant):
+                    issue.append({
+                        "line":node.lineno,
+                        "rule_id":"hardcoded secrets",
+                        "severity":"High",
+                        "message":f" Varibale {node.targets[0].id} contains hardcoded secret"
+                    })
+    return issue
+    
+
+if __name__ == "__main__":
+    code ='''
+password="1234567"
+'''
+    password(code)
+
+
+
