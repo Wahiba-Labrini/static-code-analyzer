@@ -1,3 +1,6 @@
+#vitual environnment
 ven/
+.ven
+#Python cashe
 __pycache__/
 *.pyc
