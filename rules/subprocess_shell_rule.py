@@ -14,7 +14,7 @@ def subprocess_shell(source_code:str):
                                         "line":node.lineno,
                                         "rule_id":"subprocess-shell",
                                         "severity":"High",
-                                        "message":f" Variable {node.func.attr} contains subprocess shell"   
+                                        "message":f" Subprocess.{node.func.attr}() Called with shell=True: risk of command injection"   
                                     })
     return issue
                     

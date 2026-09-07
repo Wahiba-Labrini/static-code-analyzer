@@ -12,7 +12,7 @@ def sql_injection(source_code:str):
                                 "line":node.lineno,
                                 "rule_id":"SQL-injection",
                                 "severity":"High",
-                                "message":f" Variable{node.args[0]} contains SQL injection"   
+                                "message":f"SQL query built using string concatenation : risk of SQL injection"   
                             })
     return issue
 

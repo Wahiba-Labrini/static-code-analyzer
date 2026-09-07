@@ -10,7 +10,7 @@ def pickle_load(source_code:str):
                         "line":node.lineno,
                         "rule_id":"pickle-load",
                         "severity":"High",
-                        "message":f"Variable {node.func.attr} contains pickle load"   
+                        "message":f"Use of pickle.load(): risk of code execution during deserialization"   
                     })
     return issue
                     

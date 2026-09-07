@@ -10,7 +10,7 @@ def eval_exec(source_code:str):
                         "line":node.lineno,
                         "rule_id":"eval-exec",
                         "severity":"High",
-                        "message":f"Warning using at {node.func.id}"
+                        "message":f"Dangerous use of  {node.func.id}():risk of arbitrary code execution"
                     })
     return issue
 

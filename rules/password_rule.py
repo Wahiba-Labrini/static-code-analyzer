@@ -12,7 +12,7 @@ def password(source_code:str):
                         "line":node.lineno,
                         "rule_id":"hardcoded secrets",
                         "severity":"High",
-                        "message":f" Varibale {node.targets[0].id} contains hardcoded secret"
+                        "message":f" Variabale '{node.targets[0].id}' contains a hardcoded secret"
                     })
     return issue
     
