@@ -7,7 +7,7 @@ def sql_injection(source_code:str):
             if isinstance(node.func,ast.Attribute):
                 if node.func.attr=="execute":
                     if len(node.args)>0:
-                        if isinstance(node.args[0],ast.BinOp):
+                        if isinstance(node.args[0],(ast.BinOp,ast.JoinedStr)):
                             issue.append({
                                 "line":node.lineno,
                                 "rule_id":"SQL-injection",

@@ -6,7 +6,8 @@ def password(source_code:str):
     for node in ast.walk(tree):
         if isinstance(node,ast.Assign):
             var_name=node.targets[0].id.lower()
-            if any(word in var_name for word  in sensitive_words):
+            parts=var_name.split('_')
+            if any(word in parts for word  in sensitive_words):
                 if isinstance(node.value,ast.Constant):
                     issue.append({
                         "line":node.lineno,

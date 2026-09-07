@@ -4,9 +4,15 @@ def pickle_load(source_code:str):
     tree=ast.parse(source_code)
     for node in ast.walk(tree):
         if isinstance(node,ast.Call):
+            func_name=None
+            
             if isinstance(node.func,ast.Attribute):
-                if node.func.attr=="load":
-                    issue.append({
+                func_name=node.func.attr
+            elif isinstance(node.func,ast.Name):
+                func_name=node.func.id
+
+            if func_name=="load":
+                     issue.append({
                         "line":node.lineno,
                         "rule_id":"pickle-load",
                         "severity":"High",

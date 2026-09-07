@@ -144,7 +144,8 @@ cursor=('select*from USERS where id = ' , USER_id)"""
 
 def test_invalid_sql_injection():
     code="""
-query=('select*from USERS where id ={USER_id})"""
+cursor.execute(f"select*from USERS where id ={USER_id}")
+"""
     res=sql_injection(code)
     assert len(res)==1
 
