@@ -20,7 +20,7 @@ def subprocess_shell(source_code:str):
                                         "line":node.lineno,
                                         "rule_id":"subprocess-shell",
                                         "severity":"High",
-                                        "message":f" Subprocess.{func_name}() Called with shell=True: risk of command injection"   
+                                        "message":f"Subprocess.{func_name}() Called with shell=True: risk of command injection"   
                                     })
     return issue
                     

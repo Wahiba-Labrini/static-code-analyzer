@@ -14,6 +14,7 @@ class Report(base):
     id=Column(Integer,primary_key=True)
     filename=Column(String(50))
     total_issue=Column(Integer)
+    score=Column(Integer)
     created_at=Column(DateTime(timezone=True),server_default=func.now())
 
     issue=relationship("Issue",back_populates="report")

@@ -11,9 +11,9 @@ def password(source_code:str):
                 if isinstance(node.value,ast.Constant):
                     issue.append({
                         "line":node.lineno,
-                        "rule_id":"hardcoded secrets",
+                        "rule_id":"hardcoded-secret",
                         "severity":"High",
-                        "message":f" Variabale '{node.targets[0].id}' contains a hardcoded secret"
+                        "message":f"Variabale '{node.targets[0].id}' contains a hardcoded secret"
                     })
     return issue
     

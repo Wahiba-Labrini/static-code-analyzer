@@ -6,6 +6,7 @@ from rules.pickle_load_rule import pickle_load
 from rules.sql_injection_rule import sql_injection
 from rules.subprocess_shell_rule import subprocess_shell
 from backend.models import Report,Issue,session
+from backend.scoring import calculate_score
 
 
 
@@ -49,9 +50,11 @@ async def upload_file(file:UploadFile = File(...)):
     all_issue+=sql_injection(source_code) 
     all_issue+=pickle_load(source_code) 
 
+    score=calculate_score(all_issue)
+
    
     report=Report(filename=file.filename,
-                total_issue=len(all_issue))
+                total_issue=len(all_issue),score=score)
 
     for issue in all_issue:
         new_issue=Issue (rule_id=issue.get("rule_id") ,
