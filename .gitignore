@@ -4,3 +4,5 @@ ven/
 #Python cashe
 __pycache__/
 *.pyc
+#database
+*.db
