@@ -5,6 +5,11 @@ from rules.password_rule import password
 from rules.pickle_load_rule import pickle_load
 from rules.sql_injection_rule import sql_injection
 from rules.subprocess_shell_rule import subprocess_shell
+from backend.models import Report,Issue,session
+
+
+
+
 
 
 app=FastAPI()
@@ -30,7 +35,7 @@ def get_rules():
 
 
 @app.post("/analyzer")
-async def upload_file(file:UploadFile=File(...)):
+async def upload_file(file:UploadFile = File(...)):
     if  not file.filename.endswith('.py'):
         return{'File should be a python file'}
 
@@ -39,17 +44,32 @@ async def upload_file(file:UploadFile=File(...)):
 
     all_issue=[]
     all_issue+=eval_exec(source_code)
-    all_issue+=password(source_code)
-    all_issue+=subprocess_shell(source_code)
-    all_issue+=sql_injection(source_code)
-    all_issue+=pickle_load(source_code)
+    all_issue+=password(source_code) 
+    all_issue+=subprocess_shell(source_code) 
+    all_issue+=sql_injection(source_code) 
+    all_issue+=pickle_load(source_code) 
 
-    
+   
+    report=Report(filename=file.filename,
+                total_issue=len(all_issue))
+
+    for issue in all_issue:
+        new_issue=Issue (rule_id=issue.get("rule_id") ,
+                        line= issue.get("line") ,
+                        severity=issue.get("severity") ,
+                         message=issue.get("message") 
+            )
+        report.issue.append(new_issue)
+
+    session.add(report)
+    session.commit()
+
     return {
             'filename':file.filename,
             'total_issue':len(all_issue),
             'issue':all_issue,
             'message':"File Uploaded successfuly"
-            }
+        }
+
 
 
