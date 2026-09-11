@@ -1,0 +1,126 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background:linear-gradient(135deg,#2b1055,#494993);
+   
+
+}
+
+h1{
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight:700;
+    color: #e0135b;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    text-decoration: underline;
+}
+
+h3{
+    margin-top: 5px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, serif;
+    font-weight: 500;
+    color:#fff;
+    text-transform:capitalize ;
+
+}
+
+.button-card{
+    background-color: rgba(91, 91, 172, 0.872);
+    backdrop-filter: blur(6px);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    width: 60%;
+    border-radius: 16px;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+
+
+}
+
+#fileInput{
+    margin-top: 40px;
+    background-color:#6c787d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color:#fff;
+   
+}
+
+#fileLabel{
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background:linear-gradient(135deg,#4b3f72,#572ee1);
+   
+}
+#fileLabel:hover{
+    color: #494993;
+}
+
+#fileDescription{
+    background-color:rgba(255,255, 255, 0.75);
+    border: 1px solid;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    margin: 5px;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
+.file-row{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color:rgba(255, 254, 254, 0.75);
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 70%;
+}
+
+#analyzerbtn{
+    margin-top: 40px;
+    padding-top:0px;
+    padding-bottom: 6px;
+    height:50px;
+    width:230px;
+    background:linear-gradient(135deg,#610898c3,rgb(133, 67, 213));
+    color: #fff;
+    font-size:26px;
+    font-family: serif;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow:0 4px 12px rgba(112, 58, 205, 0.4) ;
+}
+#analyzerbtn:hover{
+    color: #494993;
+}
+
+#results{
+    background-color: rgba(255, 254, 254, 0.785);
+    border-radius: 12px;
+    width: 65%;
+    min-height: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow:0 8px 24px rgba(0, 0, 0, 0.3) ;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
