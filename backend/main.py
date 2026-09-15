@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI,UploadFile,File
 from pydantic import BaseModel
 from rules.eval_exec_rule import eval_exec 
-from rules.password_rule import password
+from rules.hardcoded_secret_rule import hardcoded_secret
 from rules.pickle_load_rule import pickle_load
 from rules.sql_injection_rule import sql_injection
 from rules.subprocess_shell_rule import subprocess_shell
@@ -55,7 +55,7 @@ async def upload_file(file:UploadFile = File(...)):
 
     all_issue=[]
     all_issue+=eval_exec(source_code)
-    all_issue+=password(source_code) 
+    all_issue+=hardcoded_secret(source_code) 
     all_issue+=subprocess_shell(source_code) 
     all_issue+=sql_injection(source_code) 
     all_issue+=pickle_load(source_code) 

@@ -1,5 +1,5 @@
 import ast
-def password(source_code:str):
+def hardcoded_secret(source_code:str):
     issue=[]
     sensitive_words=["password","psswd","key","secret","key_api","secret_key","pwd"]
     tree=ast.parse(source_code)
@@ -23,6 +23,4 @@ if __name__ == "__main__":
 password="1234567"
 '''
     password(code)
-
-
 
