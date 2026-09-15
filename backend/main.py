@@ -1,3 +1,5 @@
+from fastapi.middleware.cors import CORSMiddleware
+
 from fastapi import FastAPI,UploadFile,File
 from pydantic import BaseModel
 from rules.eval_exec_rule import eval_exec 
@@ -14,6 +16,14 @@ from backend.scoring import calculate_score
 
 
 app=FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def check_status():

@@ -5,7 +5,8 @@ body{
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background:linear-gradient(135deg,#2b1055,#494993);
+    /*background:linear-gradient(135deg,#2b1055,#494993);*/
+    background:linear-gradient(135deg,#2b1055,#48245d)
    
 
 }
@@ -14,7 +15,8 @@ h1{
     margin-top:10px;
     margin-bottom: 10px;
     font-family:'Times New Roman', Times, serif;
-    font-weight:700;
+    font-weight:800;
+    font-size: 35px;
     color: #e0135b;
     letter-spacing: 1px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
@@ -33,6 +35,7 @@ h3{
 
 .button-card{
     background-color: rgba(91, 91, 172, 0.872);
+    background-color: rgba(113, 113, 160, 0.872);
     backdrop-filter: blur(6px);
     border: 2px solid rgba(255, 255, 255, 0.15);
     width: 60%;
@@ -59,15 +62,23 @@ h3{
 #fileLabel{
     font-size: 18px;
     font-weight: 600;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding-top:8px ;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border-radius: 8px;            
+    width: 25%;
+    height: 40%;
     font-family: 'Times New Roman', Times, serif;
-    color: #fff;
+    color: #653ef2;
+    background-color: #afadb7;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    background:linear-gradient(135deg,#4b3f72,#572ee1);
+    /*background:linear-gradient(135deg,#4b3f72,#572ee1);
+    background:linear-gradient(135deg,#48245d,#594993)  */
    
 }
+
 #fileLabel:hover{
     color: #494993;
 }
@@ -97,11 +108,11 @@ h3{
 
 #analyzerbtn{
     margin-top: 40px;
-    padding-top:0px;
-    padding-bottom: 6px;
-    height:50px;
-    width:230px;
-    background:linear-gradient(135deg,#610898c3,rgb(133, 67, 213));
+    padding-top:8px;
+    padding-bottom: 10px;
+    height:40%;
+    width:30%;
+    background:linear-gradient(135deg,#6a03abc3,rgb(119, 35, 222));
     color: #fff;
     font-size:26px;
     font-family: serif;
@@ -109,9 +120,10 @@ h3{
     border-radius: 8px;
     box-shadow:0 4px 12px rgba(112, 58, 205, 0.4) ;
 }
+/*
 #analyzerbtn:hover{
     color: #494993;
-}
+}*/
 
 #results{
     background-color: rgba(255, 254, 254, 0.785);
