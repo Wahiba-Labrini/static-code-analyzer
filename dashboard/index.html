@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Static Code Analyzer</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     
 </head>
 <body>
 
-    <h1 Align="center"> Static Code Analyzer</h1>
-    <h3 Align="center"> Upload a python file to detect security  vulnerabilities </h3>
+    <div class="logo">🛡️Static Code Analyzer</div>
+    <hr>
+    <h1 > Static Code Analyzer</h1>
+    <h3 > Detect Security Vulnerabilities in your Python Code and keep your projects Safe</h3>
 
     <div class="button-card"> 
+        <span id="sousTitle">⬆ Upload your python file</span>
         <div class="file-row">
             <input type="file" id="fileInput" style="display: none;"> 
             <label for="fileInput" id="fileLabel"> Upload a file 📤 </label>
-            <span id="fileDescription">Choosing a python file</span>
+            <span id="fileDescription"> No file chosen</span>
         </div>
         <button id="analyzerbtn" > Analyze</button>
     </div>
-
+    
+    <h2 id="resultsTitle" style="display: none;">📊 Analytics Results </h2>
     <div id="results"></div>
     <script src="script.js"></script>
 </body>

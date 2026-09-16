@@ -48,7 +48,7 @@ def get_rules():
 @app.post("/analyzer")
 async def upload_file(file:UploadFile = File(...)):
     if  not file.filename.endswith('.py'):
-        return{'File should be a python file'}
+        return{'error':'File should be a python file'}
 
     content= await file.read()
     source_code=content.decode('utf-8')
@@ -78,6 +78,7 @@ async def upload_file(file:UploadFile = File(...)):
     session.commit()
 
     return {
+            'score':score,
             'filename':file.filename,
             'total_issue':len(all_issue),
             'issue':all_issue,
