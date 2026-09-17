@@ -1,4 +1,4 @@
-# 💬 Static Code Analyzer — A Chat-Style README
+# 🔍 Static Code Analyzer — 💬 A Chat-Style README
 
 > *A README written as a conversation. Because why should documentation be boring?*
 
@@ -13,7 +13,7 @@ itself. You upload a `.py` file, and it's parsed and analyzed using
 Python's `ast` module to detect risky patterns, get a health score, and 
 see everything on a live dashboard.
 
-I built it to go beyond "just another CRUD project" — to actually 
+I built it to go beyond **just another CRUD project** — to actually 
 understand how static analysis tools work under the hood, from parsing 
 code structure to designing a full pipeline: detection rules → API → 
 database → dashboard.
@@ -89,29 +89,38 @@ database → dashboard.
 **🧑‍💻 Developer:** Five easy steps:
 
 ```bash
-**1️⃣ Clone the repository:**
+1️⃣** Clone the repository:**
 git clone https://github.com/Wahiba-Labrini/static-code-analyzer.git
 cd static-code-analyzer
 ```
 
 ```bash
-**2️⃣ Create and activate a virtual environment:**
+2️⃣** Create and activate a virtual environment:**
 python -m venv venv
 venv\Scripts\Activate.ps1
 ```
 
 ```bash
-**3️⃣ Install the dependencies:**
+3️⃣** Install the dependencies:**
 pip install -r requirements.txt
 ```
 
 ```bash
-**4️⃣ Run the FastAPI server:**
+4️⃣** Run the FastAPI server:**
 uvicorn backend.main:app --reload
 ```
 
-**5️⃣ Open `dashboard/index.html` in your browser** — just make sure the server from step 4 is still running in the background.
+5️⃣** Open `dashboard/index.html` in your browser** — just make sure the server from step 4 is still running in the background.
 
+**Windows:**
+```bash
+start dashboard/index.html
+```
+
+**macOS/Linux**
+```bash
+open dashboard/index.html
+```
 ---
 
 **👤 User:** Any screenshot?
@@ -133,6 +142,7 @@ uvicorn backend.main:app --reload
 ## 📚 Behind the scenes: Lessons Learned & Challeng
 
 **👤User:** Building this must have been smooth, righ ?
+
 **🧑‍💻 Developer:** Haha, not exactly. Let me tell you the war stories 😅
 
 ### 1️⃣ Using pytest to discover rule limitations
@@ -154,7 +164,7 @@ I also checked the CSS class names and everything appeared to be correctly conne
 
 The problem was in the CSS: I had used **white text styling on `span` elements**, and some of the result classes were applied to `span` elements. Since the dashboard background was also white, the content was rendered but could not be seen.
 
-«💡 **Lesson learned:** When UI elements seem to be missing, don't assume they aren't being generated. Check the complete chain — JavaScript, HTML, and CSS — and inspect the rendered elements in the browser.».
+>💡 **Lesson learned:** When UI elements seem to be missing, don't assume they aren't being generated. Check the complete chain — JavaScript, HTML, and CSS — and inspect the rendered elements in the browser.».
 
 ---
 
