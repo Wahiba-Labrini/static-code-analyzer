@@ -89,28 +89,28 @@ database → dashboard.
 **🧑‍💻 Developer:** Five easy steps:
 
 ```bash
-1️⃣** Clone the repository:**
+1️⃣.Clone the repository:
 git clone https://github.com/Wahiba-Labrini/static-code-analyzer.git
 cd static-code-analyzer
 ```
 
 ```bash
-2️⃣** Create and activate a virtual environment:**
+2️⃣.Create and activate a virtual environment:
 python -m venv venv
 venv\Scripts\Activate.ps1
 ```
 
 ```bash
-3️⃣** Install the dependencies:**
+3️⃣.Install the dependencies:
 pip install -r requirements.txt
 ```
 
 ```bash
-4️⃣** Run the FastAPI server:**
+4️⃣. Run the FastAPI server:
 uvicorn backend.main:app --reload
 ```
 
-5️⃣** Open `dashboard/index.html` in your browser** — just make sure the server from step 4 is still running in the background.
+   5️⃣.Open`dashboard/index.html` in your browser — just make sure the server from step 4 is still running in the background.
 
 **Windows:**
 ```bash
