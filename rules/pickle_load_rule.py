@@ -14,7 +14,7 @@ def pickle_load(source_code:str):
             if func_name=="load":
                      issue.append({
                         "line":node.lineno,
-                        "rule_id":"pickle-load",
+                        "rule_id":"📦 pickle-load",
                         "severity":"High",
                         "message":f"Use of pickle.load(): risk of code execution during deserialization"   
                     })

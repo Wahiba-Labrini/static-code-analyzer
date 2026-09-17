@@ -45,7 +45,7 @@ document.getElementById("analyzerbtn").addEventListener("click",function(){
             else if(data.score>=40) scoreColor ="linear-gradient(135deg,#f4a261,#e67e22)"
             else scoreColor ="linear-gradient(135deg,#e63946,#c0392b)"
             resHtml+=`<div class="score-circle" style="background:${scoreColor}">${data.score}/100</div>`
-            resHtml+=`<p>Total issues: ${data.total_issue}</p>`;
+            resHtml+=`<div style="text-lign:center;"><span class="total-issues-box">Total issues: ${data.total_issue}</span></div>`;
 
             data.issue.forEach(issue => {
                 resHtml+=`<div class="issue-card">

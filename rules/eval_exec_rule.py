@@ -8,7 +8,7 @@ def eval_exec(source_code:str):
                 if node.func.id in ['eval','exec']:
                     issue.append({
                         "line":node.lineno,
-                        "rule_id":"eval-exec",
+                        "rule_id":"⚙️ eval-exec",
                         "severity":"High",
                         "message":f"Dangerous use of  {node.func.id}():risk of arbitrary code execution"
                     })

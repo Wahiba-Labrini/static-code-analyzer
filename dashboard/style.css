@@ -94,7 +94,7 @@ h3{
     width: 25%;
     height: 38%;
     font-family: 'Times New Roman', Times, serif;
-    color: #5151a1;
+    color: #5555a8;
     background-color:rgba(194, 181, 239, 0.75);
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -103,7 +103,7 @@ h3{
 }
 
 #fileLabel:hover{
-    color: #6c6cd2;
+    color: #6464e9;
 }
 
 #fileDescription{
@@ -216,7 +216,21 @@ h3{
 
 }
 
+.total-issues-box{
+    display: inline-block;
+    background: #f3ecff;
+    color: #4a2f80;
+    border: 2px solid #9487f0;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 20 auto;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 24px;
 
+}
 
 .info-box{
     padding: 8px 14px ;

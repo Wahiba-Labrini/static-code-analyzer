@@ -12,9 +12,6 @@ from backend.scoring import calculate_score
 
 
 
-
-
-
 app=FastAPI()
 
 app.add_middleware(
@@ -32,11 +29,11 @@ def check_status():
 
 
 rules_info=[
-    {"rule_id":"eval-exec","name":"Eval/Exec detection ","description":"detects dangerous use of eval() and exec()"},
-    {"rule_id":"hardcoded-secret","name":"Hardcoded Secrets ","description":"detects passwords written directly in code"},
-    {"rule_id":"subprocess-shell","name":"Subprocess Shell ","description":"detects subprocess calls with shell=True"},
-    {"rule_id":"sql-injection","name":"SQL Injection ","description":"detects SQL queries built via string concatenation"},
-    {"rule_id":"pickle-load","name":"Pickle Deserialisation ","description":"detects use of pckle.load()"}
+    {"rule_id":"⚙️ eval-exec","name":"Eval/Exec detection ","description":"detects dangerous use of eval() and exec()"},
+    {"rule_id":"🗝️ hardcoded-secret","name":"Hardcoded Secrets ","description":"detects passwords written directly in code"},
+    {"rule_id":"💻 subprocess-shell","name":"Subprocess Shell ","description":"detects subprocess calls with shell=True"},
+    {"rule_id":"💉 sql-injection","name":"SQL Injection ","description":"detects SQL queries built via string concatenation"},
+    {"rule_id":"📦 pickle-load","name":"Pickle Deserialisation ","description":"detects use of pckle.load()"}
 ]
 
 @app.get("/rules")

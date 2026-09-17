@@ -1,9 +1,9 @@
 rules_weiths={
-        "eval-exec":20,
-        "pickle-load":18,
-        "sql-injection":15,
-        "subprocess-shell":15,
-        "hardcoded-secret":10,    
+        "⚙️ eval-exec":20,
+        "📦 pickle-load":18,
+        "💉 sql-injection":15,
+        "💻 subprocess-shell":15,
+        "🗝️ hardcoded-secret":10,    
     }
 def calculate_score(all_issue):
     score=100

@@ -10,7 +10,7 @@ def sql_injection(source_code:str):
                         if isinstance(node.args[0],(ast.BinOp,ast.JoinedStr)):
                             issue.append({
                                 "line":node.lineno,
-                                "rule_id":"sql-injection",
+                                "rule_id":"💉 sql-injection",
                                 "severity":"High",
                                 "message":f"SQL query built using string concatenation : risk of SQL injection"   
                             })
